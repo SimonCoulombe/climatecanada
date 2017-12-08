@@ -1,5 +1,6 @@
 #http://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&stationID=26892&Year=2017&Month=12&Day=7&timeframe=1&submit=Download+Data
 
+# radar : http://climate.weather.gc.ca/radar/index_e.html
 
 library(purrr)
 library(magrittr)
@@ -16,6 +17,9 @@ library(ggplot2)
 
 dailyskip <- 25 
 hourlyskip <- 16
+
+
+
 ## import weather data, save clean data to csv.
 download.file("http://climate.weather.gc.ca/climate_data/bulk_data_e.html?format=csv&stationID=26892&Year=2017&Month=12&timeframe=1&submit=Download+Data",
               destfile="data/pouet.csv")
